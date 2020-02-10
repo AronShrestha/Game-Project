@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/tileset.png" type="Texture" id=1]
+[ext_resource path="res://art/Tile_6.png" type="Texture" id=2]
+[ext_resource path="res://art/_Spritesheet.png" type="Texture" id=3]
+[ext_resource path="res://art/tile_20.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41, 33 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( -16.1535, -15.1728 )
+b = Vector2( 14.4072, 14.4416 )
+
+[node name="Outfit\'sDeign" type="Node2D"]
+
+[node name="Design" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 16, 80, 64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Design"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Design2" type="Sprite" parent="."]
+position = Vector2( 119, 56.5 )
+scale = Vector2( 0.279545, 0.235156 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -16, -16, 176, 256 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Design2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design2/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Design3" type="Sprite" parent="."]
+position = Vector2( 253, 68.5 )
+scale = Vector2( 0.279545, 0.235156 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 80, 64, 608, 144 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Design3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design3/StaticBody2D"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Design4" type="Sprite" parent="."]
+position = Vector2( 212.5, 197.5 )
+scale = Vector2( 3.43579, 2.73516 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Design4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design4/StaticBody2D"]
+position = Vector2( 0.582108, 0.365608 )
+shape = SubResource( 2 )
+one_way_collision_margin = 15.0
